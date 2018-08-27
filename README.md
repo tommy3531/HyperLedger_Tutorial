@@ -12,11 +12,37 @@ Consist of functions that can be used to provide controll access to the ledger. 
 
 The process of keeping the ledger transactions synchronized across the network to ensure the that the ledgers update only when the transactions are approved by appropriate participants, and that when ledgers do update, they update with the same transactions in the same order.
 
+# Hyperledger
+
+Consisit of framework and modules, frameworks consist of ledger, consensu algorithm. privacy and smartcontracts.  
+
+
+### What are some Hyperledger frameworks?
+
+    1. Iroha - Caters to mobile developer uses the YAC consensu algorithm
+    2. Sawtooth - Modular platform for building, deploying, and running distrubuted ledgers, can utitlize            different censnsus algorithms, by default it uses proof of elapsed time (PoET), scalability without high      energy consumption. Supports permissioned and permissionless deployments.  Network can grow nad change        consensue on the fly.
+    3. Fabric - provides plug and play for membership services and consensus, channel to provide confidential        transactions.
+    4. Indy - built for decentralized identity. Privacy by design
+    5. Burrow - is a permissionable smart contract machine that provides a modular blockchain client with a          permissioned smart contract.
+        - Major Components
+            - Gateway
+            - Smart contract application engine
+            - Consensus Engine
+            - Application blockchain interface
+
+### What are modules and how are they used?
+
+Moduels are used for deploying and maintaining blockchains, examining ledger data, design and extending blockchain networks.
+
+    1. Cello - 
+    2. Explorer
+    3. Composer
+
 ------------------------------------------------------------------------
 
 # Hyperledger Fabric
 
-Key Terms - Private / Permissioned, Membership Service Provider (MSP),channels, world state, transaction logs, chaincode, consensus, 
+Key Terms - Private / Permissioned, Membership Service Provider (MSP),channels, world state, transaction logs, chaincode, consensus. 
 
 -----------------------------------------------------------------------
 
