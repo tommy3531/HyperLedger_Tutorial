@@ -34,9 +34,16 @@ Consisit of framework and modules, frameworks consist of ledger, consensu algori
 
 Moduels are used for deploying and maintaining blockchains, examining ledger data, design and extending blockchain networks.
 
-    1. Cello - 
-    2. Explorer
-    3. Composer
+    1. Cello - ??
+    2. Explorer - ??
+    3. Composer - ??
+        1. Tools
+            1. composer-cli
+            2. rest-server
+            3. yomen
+            4. playground
+            5. javascript
+            
 
 ------------------------------------------------------------------------
 
@@ -114,6 +121,59 @@ https://hyperledger-fabric.readthedocs.io/en/release-1.2/functionalities.html
     4. ordering services
     5. channels
     6. Fabric Certification Authorities
+
+
+
+
+### Creating a Business network structure
+
+The key concept for Hyperledger composer is the business network.  It defines the DATA MODEL, TRANSACTION LOGIC and ACCESS CONTROL RULES.
+
+To create a business network use Yeoman
+
+    1. yo hyperledger-composer:<BUSINESS NETWORK NAME>
+    2. select org.example.<BUSINESS NETWORK NAME>
+    3. Select No when asked whether to generate an empty network or not
+
+### Genrate business network archieve
+
+    1. Navigate to directory
+        1. composer archieve create -t dir -n . 
+
+### Deploy the business network
+
+    1. composer netwrok install --card PeerAdmin<SOMETHING> -- archieveFile <BUSINESS NETWORK NAME.bna>
+
+### Start the business network
+
+    1. composer network start --networkName <BUSINESS NETWORK NAME> --networkVersion<0.0.1> --networkAdmin admin --networkAdminEnrollSecrete adminpw --card PeerAdmin@<SOMETHING> --file networkadmin.card
+
+### Import network administrator identity as a usable business network card
+
+    1. composer card import --file networkadmin.card
+
+### Check that the business network has been deployed
+
+    1. composer network ping --card admin@<BUSINESS NETWORK NAME>
+
+### Generating a REST server
+
+    1. composer-rest-server
+    2. Enter admin@<BUSINESS NETWORK NAME>
+    3. never use namespaces
+    4. NO dont secure API
+    5. YES enable event publication
+    6. NO dont enable TLS security
+
+### Generating Application
+
+    1. yo hyperledger-composer:angular
+    2. Yes, connect to running business network
+    3. package.json
+    4. admin@<BUSINESS NETWORK NAME>
+    5. CONNECT to an exisiting REST API
+    6. locahost:3000
+    7. Namespaces are not used
 
     
 

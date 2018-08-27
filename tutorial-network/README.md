@@ -1,6 +1,25 @@
-# Hyperledger
+# Project Structure
 
-Is a tool kit that makes building business network with blockchain easier. 
+    1. angualr-app
+    2. features
+    3. lib
+    4. models
+    5. test
+    6. networkadmin.card
+    7. package.json
+    8. permission.acl
+    9. tutorial-network@0.0.1.bna
+
+# Start Dev Environment
+
+    1. composer-rest-server - locahost:3000
+    2. composer playground
+    3. npm start - localhost:42000
+
+
+
+
+
 
 ## Composer
 
